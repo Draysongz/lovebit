@@ -29,33 +29,33 @@ export default function OpenScreen() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-image bg-cover bg-center bg-[#070B14] flex flex-col items-center">
+    <div className="min-h-screen bg-[url('/darkbg.svg')] bg-cover bg-center  flex flex-col items-center">
       <div className="flex gap-2 pt-8 mb-8">
         <Image src="/icon4.svg" alt="icon4" width={40} height={40} />
         <span className="text-xl mt-2 font-medium">@Al3hemy</span>
       </div>
-       <div className="flex gap-4">
-         <Image src="/btclogo.svg" width={60} height={60} alt="btclogo" />
-         <p className="text-5xl font-bold mt-2">{count.toLocaleString()}</p>
-        </div> 
-        <div className="flex border border-black bg-gray-950 pl-2 pr-3 rounded-md mt-4">
-            <div className="flex">
-                <Image alt="love" src="/love.png" width={55} height={55} />
-                <p className="text-xl mt-3.5">:3</p> 
-            </div> 
-            <div className="flex">
-                <Image alt="love" src="/time.png" width={55} height={55} />
-                <p className="text-xl mt-3.5">:3</p> 
-            </div> 
+      <div className="flex gap-4">
+        <Image src="/btclogo.svg" width={60} height={60} alt="btclogo" />
+        <p className="text-5xl font-bold mt-2">{count.toLocaleString()}</p>
+      </div>
+      <div className="flex border border-black bg-gray-950 pl-2 pr-3 rounded-md mt-4">
+        <div className="flex">
+          <Image alt="love" src="/love.png" width={55} height={55} />
+          <p className="text-xl mt-3.5">:3</p>
         </div>
-      <div 
+        <div className="flex">
+          <Image alt="love" src="/time.png" width={55} height={55} />
+          <p className="text-xl mt-3.5">:3</p>
+        </div>
+      </div>
+      <div
         ref={containerRef}
         className="relative w-full max-w-md mx-auto cursor-pointer"
         onClick={handleClick}
       >
-        <Image 
-          src="/icon5.svg" 
-          alt="Character" 
+        <Image
+          src="/icon5.svg"
+          alt="Character"
           width={300}
           height={300}
           className="w-[300px] h-auto mx-auto"
@@ -78,6 +78,6 @@ export default function OpenScreen() {
       </div>
       <BottomNav />
     </div>
-  )
+  );
 }
 

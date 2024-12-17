@@ -29,9 +29,7 @@ const Task = () => {
   }
   return (
     <Flex
-      bgImage={
-        "linear-gradient(0deg,rgba(3, 6, 21, 0.964),rgba(3, 6, 21, 0.964) ), url('/bg.png')"
-      }
+      bgImage={"url('/darkbg.svg')"}
       bgPos="center"
       bgSize="cover"
       bgRepeat="no-repeat"
@@ -145,7 +143,13 @@ const Task = () => {
                 borderRadius={"20px"}
               >
                 <DialogBody p={2}>
-                  <Flex direction={"column"} p={2} gap={3} justifyContent={"center"} alignItems={"center"}>
+                  <Flex
+                    direction={"column"}
+                    p={2}
+                    gap={3}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                  >
                     <Heading
                       bgGradient="conic-gradient(from 180deg at 50% 50%, #4AAAFF 0deg, #1018BD 72deg, #469EEC 144deg, #95A3FF 216deg, #1018BD 288deg, #4AAAFF 360deg)"
                       bgClip="text"

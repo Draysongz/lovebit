@@ -8,9 +8,7 @@ export default function Start() {
       minH={"100vh"}
       justifyContent={"center"}
       alignItems={"center"}
-      bgImage={
-        "linear-gradient(0deg,rgba(74, 170, 255, 0.9),rgba(74, 170, 255, 0.9) ), url('/bg.png')"
-      }
+      bgImage={"url('/lightbg.svg')"}
       bgSize={"cover"}
       bgPos={"center"}
       bgRepeat={"no-repeat"}

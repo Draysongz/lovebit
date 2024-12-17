@@ -7,7 +7,7 @@ export default function OpenScreen() {
     router.push("/second-screen")
   }
   return (
-    <div className="min-h-screen bg-gradient-image bg-cover bg-center bg-[#070B14] flex flex-col items-center justify-center px-4">
+    <div className="min-h-screen bg-[url('/darkbg.svg')] bg-cover bg-center  flex flex-col items-center justify-center px-4">
       {/* Main container with relative positioning for overlay images */}
       <div className="relative w-full max-w-md mx-auto">
         {/* First image */}
