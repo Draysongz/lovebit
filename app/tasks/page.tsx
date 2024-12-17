@@ -13,6 +13,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { BottomNav } from "@/components/button-nav";
 type task = {
     title : string,
     reward: number
@@ -60,6 +61,7 @@ const Task = () => {
             justifyContent="space-between"
             p={1}
             w="100%"
+            pb={index == taskList.length - 1 ? 5 : 0}
           >
             {/* Task Icon */}
             <Image
@@ -203,6 +205,8 @@ const Task = () => {
           </Flex>
         ))}
       </Flex>
+
+      <BottomNav />
     </Flex>
   );
 };
