@@ -8,6 +8,7 @@ import {
   Card,
   Image,
   Button,
+  List,
 } from "@chakra-ui/react";
 import { BottomNav } from "@/components/button-nav";
 import { gameDeets } from "@/lib/data";
@@ -17,10 +18,7 @@ import {
   DrawerBody,
   DrawerCloseTrigger,
   DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
   DrawerRoot,
-  DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
 
@@ -136,7 +134,7 @@ function page() {
                     </DrawerTrigger>
                     <DrawerContent roundedTop={"l3"}>
                       <DrawerBody p={3} bg={"#030615"}>
-                        <Flex direction={"column"}>
+                        <Flex direction={"column"} gap={3}>
                           <Image src="/longrect.svg" alt="long rect" />
 
                           <Flex direction={"column"} gap={2}>
@@ -173,8 +171,198 @@ function page() {
                               {selectedGame?.cta}
                             </Button>
                           </Flex>
+
+                          <Flex direction={"column"}>
+                            <Text
+                              bgGradient="conic-gradient(from 180deg at 50% 50%, #4AAAFF 0deg, #1018BD 72deg, #469EEC 144deg, #95A3FF 216deg, #1018BD 288deg, #4AAAFF 360deg)"
+                              bgClip="text"
+                              fontSize="16px"
+                              fontWeight={"bold"}
+                            >
+                              Objectives
+                            </Text>
+                            <Text color={"white"}>
+                              {selectedGame?.objectives}
+                            </Text>
+                          </Flex>
+
+                          <Flex direction={"column"}>
+                            <Text
+                              bgGradient="conic-gradient(from 180deg at 50% 50%, #4AAAFF 0deg, #1018BD 72deg, #469EEC 144deg, #95A3FF 216deg, #1018BD 288deg, #4AAAFF 360deg)"
+                              bgClip="text"
+                              fontSize="16px"
+                              fontWeight={"bold"}
+                            >
+                              Control
+                            </Text>
+
+                            <List.Root
+                              as={"ul"}
+                              listStyle={"decimal"}
+                              p={3}
+                              ps="5"
+                            >
+                              {selectedGame &&
+                                selectedGame.controls &&
+                                selectedGame.controls.map((control, index) => {
+                                  return (
+                                    <List.Item
+                                      key={index}
+                                      _marker={{ color: "inherit" }}
+                                    >
+                                      {control}
+                                    </List.Item>
+                                  );
+                                })}
+                            </List.Root>
+                          </Flex>
+
+                          <Flex direction={"column"}>
+                            <Text
+                              bgGradient="conic-gradient(from 180deg at 50% 50%, #4AAAFF 0deg, #1018BD 72deg, #469EEC 144deg, #95A3FF 216deg, #1018BD 288deg, #4AAAFF 360deg)"
+                              bgClip="text"
+                              fontSize="16px"
+                              fontWeight={"bold"}
+                            >
+                              Gameplay
+                            </Text>
+
+                            <List.Root
+                              as={"ul"}
+                              listStyle={"decimal"}
+                              p={3}
+                              ps="5"
+                            >
+                              {selectedGame &&
+                                selectedGame.gameplay &&
+                                selectedGame.gameplay.map((gameplay, index) => {
+                                  return (
+                                    <List.Item
+                                      key={index}
+                                      _marker={{ color: "inherit" }}
+                                    >
+                                      {gameplay}
+                                    </List.Item>
+                                  );
+                                })}
+                            </List.Root>
+                          </Flex>
+
+                          <Flex direction={"column"}>
+                            <Text
+                              bgGradient="conic-gradient(from 180deg at 50% 50%, #4AAAFF 0deg, #1018BD 72deg, #469EEC 144deg, #95A3FF 216deg, #1018BD 288deg, #4AAAFF 360deg)"
+                              bgClip="text"
+                              fontSize="16px"
+                              fontWeight={"bold"}
+                            >
+                              End Of Game
+                            </Text>
+                            <Text color={"white"}>{selectedGame?.endgame}</Text>
+                          </Flex>
+
+                          <Flex direction={"column"}>
+                            <Text
+                              bgGradient="conic-gradient(from 180deg at 50% 50%, #4AAAFF 0deg, #1018BD 72deg, #469EEC 144deg, #95A3FF 216deg, #1018BD 288deg, #4AAAFF 360deg)"
+                              bgClip="text"
+                              fontSize="16px"
+                              fontWeight={"bold"}
+                            >
+                              Point System
+                            </Text>
+
+                            <List.Root
+                              as={"ul"}
+                              listStyle={"decimal"}
+                              p={3}
+                              ps="5"
+                            >
+                              {selectedGame &&
+                                selectedGame.pointSystem &&
+                                selectedGame.pointSystem.map(
+                                  (pointSystem, index) => {
+                                    return (
+                                      <List.Item
+                                        key={index}
+                                        _marker={{ color: "inherit" }}
+                                      >
+                                        {pointSystem}
+                                      </List.Item>
+                                    );
+                                  }
+                                )}
+                            </List.Root>
+                          </Flex>
+
+                          <Flex direction={"column"}>
+                            <Text
+                              bgGradient="conic-gradient(from 180deg at 50% 50%, #4AAAFF 0deg, #1018BD 72deg, #469EEC 144deg, #95A3FF 216deg, #1018BD 288deg, #4AAAFF 360deg)"
+                              bgClip="text"
+                              fontSize="16px"
+                              fontWeight={"bold"}
+                            >
+                              Bonus Points
+                            </Text>
+
+                            <List.Root
+                              as={"ul"}
+                              listStyle={"decimal"}
+                              p={3}
+                              ps="5"
+                            >
+                              {selectedGame &&
+                                selectedGame.pointSystem &&
+                                selectedGame.pointSystem.map(
+                                  (pointSystem, index) => {
+                                    return (
+                                      <List.Item
+                                        key={index}
+                                        _marker={{ color: "inherit" }}
+                                      >
+                                        {pointSystem}
+                                      </List.Item>
+                                    );
+                                  }
+                                )}
+                            </List.Root>
+                          </Flex>
+
+                          {selectedGame && selectedGame.leaderboard && (
+                            <Flex direction={"column"}>
+                              <Text
+                                bgGradient="conic-gradient(from 180deg at 50% 50%, #4AAAFF 0deg, #1018BD 72deg, #469EEC 144deg, #95A3FF 216deg, #1018BD 288deg, #4AAAFF 360deg)"
+                                bgClip="text"
+                                fontSize="16px"
+                                fontWeight={"bold"}
+                              >
+                                Leaderboard
+                              </Text>
+
+                              <List.Root
+                                as={"ul"}
+                                listStyle={"decimal"}
+                                p={3}
+                                ps="5"
+                              >
+                                {selectedGame &&
+                                  selectedGame.leaderboard &&
+                                  selectedGame.leaderboard.map(
+                                    (leaderboard, index) => {
+                                      return (
+                                        <List.Item
+                                          key={index}
+                                          _marker={{ color: "inherit" }}
+                                        >
+                                          {leaderboard}
+                                        </List.Item>
+                                      );
+                                    }
+                                  )}
+                              </List.Root>
+                            </Flex>
+                          )}
                         </Flex>
                       </DrawerBody>
+                      <DrawerCloseTrigger />
                     </DrawerContent>
                   </DrawerRoot>
                 </Flex>
