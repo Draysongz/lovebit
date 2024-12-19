@@ -6,6 +6,7 @@ import { achievements } from "@/lib/achievement"
 import { AchievementCard } from "@/components/achievement-card"
 import { AchievementDrawer } from "@/components/achievement-drawer"
 import { type Achievement } from "@/types/achievement"
+import { BottomNav } from "@/components/button-nav"
 
 export default function AchievementsPage() {
   const [selectedAchievement, setSelectedAchievement] = useState<Achievement | null>(null)
@@ -66,6 +67,7 @@ export default function AchievementsPage() {
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       />
+      <BottomNav />
     </div>
   )
 }

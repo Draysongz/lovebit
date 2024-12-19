@@ -119,7 +119,7 @@ export function BottomNav() {
           <span
             className={`${
               pathname === "/achievements"
-                ? "font-semibold  text-white"
+                ? "font-semibold text-xs  text-white"
                 : "text-xs text-zinc-400 mt-1"
             } `}
           >
