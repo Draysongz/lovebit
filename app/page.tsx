@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import Loading from "./loading/page";
-import OpenScreen from "./screen/page";
+import Tap from "./tap/page";
 import Start from "./start/page";
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
     <div>
       {currentStep === "loading" && <Loading />}
       {currentStep === "start" && <Start />}
-      {currentStep === "open" && <OpenScreen />}
+      {currentStep === "open" && <Tap />}
     </div>
   );
 }

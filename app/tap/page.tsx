@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { BottomNav } from "@/components/button-nav"
 import Image from "next/image"
 
-export default function OpenScreen() {
+export default function Tap() {
   const [count, setCount] = useState(134690)
   const [animations, setAnimations] = useState<{ id: number; x: number; y: number }[]>([])
   const containerRef = useRef<HTMLDivElement>(null)
