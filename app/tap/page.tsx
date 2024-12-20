@@ -31,25 +31,25 @@ export default function OpenScreen() {
   return (
     <div className="min-h-screen bg-[url('/darkbg.svg')] bg-cover bg-center  flex flex-col items-center">
       <div className="flex gap-2 pt-6">
-                  <div className="group relative aspect-square overflow-hidden ml-2">
-                      <Image src={"/hand.svg"} alt="Saved" width={100} height={100} className="w-full h-full object-cover"/>
-                      <div className="absolute border bg-button-angular bottom-0 left-0 right-0 p-4">
-                      <h3 className="text-xs text-center font-semibold text-white">POLAR BEAR</h3>
-                      </div>
-                  </div>
-                  <div className="group relative aspect-square overflow-hidden">
-                      <Image src={"/donation.svg"} alt="Saved" width={100} height={100} className="w-full h-full object-cover"/>
-                      <div className="absolute border bg-button-angular bottom-0 left-0 right-0 p-4">
-                      <h3 className="text-xs text-center font-semibold text-white">DONATION</h3>
-                      </div>
-                  </div>
-                  <div className="group relative aspect-square overflow-hidden mr-2">
-                      <Image src={"/bear.svg"} alt="Saved" width={100} height={100} className="w-full h-full object-cover"/>
-                      <div className="absolute border bg-button-angular bottom-0 left-0 right-0 p-4">
-                      <h3 className="text-xs text-center font-semibold text-white">LOVE BIT</h3>
-                      </div>
-                  </div>
-              </div>
+        <div className="relative aspect-square ml-2">
+          <Image src={"/hand.svg"} alt="Saved" width={100} height={100} className="w-full h-full object-cover"/>
+          <div className="absolute border bg-button-angular bottom-0 left-0 right-0 p-4">
+          <h3 className="text-xs text-center font-semibold text-white">POLAR BEAR</h3>
+          </div>
+        </div>
+        <div className="relative aspect-square">
+          <Image src={"/donation.svg"} alt="Saved" width={100} height={100} className="w-full h-full object-cover"/>
+          <div className="absolute border bg-button-angular bottom-0 left-0 right-0 p-4">
+          <h3 className="text-xs text-center font-semibold text-white">DONATION</h3>
+          </div>
+        </div>
+        <div className="relative aspect-square mr-2">
+          <Image src={"/bear.svg"} alt="Saved" width={100} height={100} className="w-full h-full object-cover"/>
+          <div className="absolute border bg-button-angular bottom-0 left-0 right-0 p-4">
+          <h3 className="text-xs text-center font-semibold text-white">LOVE BIT</h3>
+          </div>
+        </div>
+      </div>
       <div className="flex gap-4 mt-6">
         <Image src="/btclogo.svg" width={60} height={60} alt="btclogo" />
         <p className="text-5xl text-white font-bold mt-2">{count.toLocaleString()}</p>
