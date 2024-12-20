@@ -3,6 +3,7 @@ import { useState, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BottomNav } from "@/components/button-nav"
 import Image from "next/image"
+import TapComponent from '@/components/home-component'
 
 export default function OpenScreen() {
   const [count, setCount] = useState(134690)
@@ -30,11 +31,8 @@ export default function OpenScreen() {
 
   return (
     <div className="min-h-screen bg-[url('/darkbg.svg')] bg-cover bg-center  flex flex-col items-center">
-      <div className="flex gap-2 pt-8 mb-8">
-        <Image src="/icon4.svg" alt="icon4" width={40} height={40} />
-        <span className="text-xl mt-2 font-medium">@Al3hemy</span>
-      </div>
-      <div className="flex gap-4">
+      <TapComponent />
+      <div className="flex gap-4 mt-6">
         <Image src="/btclogo.svg" width={60} height={60} alt="btclogo" />
         <p className="text-5xl font-bold mt-2">{count.toLocaleString()}</p>
       </div>
@@ -50,15 +48,15 @@ export default function OpenScreen() {
       </div>
       <div
         ref={containerRef}
-        className="relative w-full max-w-md mx-auto cursor-pointer"
+        className="relative w-full max-w-md mx-auto cursor-pointer mt-8"
         onClick={handleClick}
       >
         <Image
-          src="/icon5.svg"
+          src="/home-logo.svg"
           alt="Character"
           width={300}
           height={300}
-          className="w-[300px] h-auto mx-auto"
+          className="w-[280px] h-auto mx-auto"
         />
         <AnimatePresence>
           {animations.map(({ id, x, y }) => (

@@ -8,7 +8,7 @@ export function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-transparent border-t border-[#020aa1]  py-1">
+    <nav className="fixed bottom-0 left-0 right-0 bg-transparent border-t border-[#020aa1] py-1">
       <div className="max-w-md mx-auto flex items-center justify-between">
         <Link
           href="/tap"
