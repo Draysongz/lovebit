@@ -34,7 +34,7 @@ export default function OpenScreen() {
       <TapComponent />
       <div className="flex gap-4 mt-6">
         <Image src="/btclogo.svg" width={60} height={60} alt="btclogo" />
-        <p className="text-5xl font-bold mt-2">{count.toLocaleString()}</p>
+        <p className="text-5xl text-white font-bold mt-2">{count.toLocaleString()}</p>
       </div>
       <div className="flex border border-black bg-gray-950 pl-2 pr-3 rounded-md mt-4">
         <div className="flex">
