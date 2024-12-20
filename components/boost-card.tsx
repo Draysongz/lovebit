@@ -32,7 +32,7 @@ export function BoostCard({ name, progress, total, cost, onClick }: BoostCardPro
 
         <Button 
           variant="outline" 
-          className="w-9/12 rounded-full bg-[#1a1b3e] border-[#2a2b5e] hover:bg-[#2a2b5e] text-xs"
+          className="w-9/12 rounded-full bg-[#1a1b3e] border-[#2a2b5e] hover:bg-[#2a2b5e] text-xs text-gray-300"
         >
           LEVEL 1
         </Button>
