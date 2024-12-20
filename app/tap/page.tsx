@@ -39,11 +39,11 @@ export default function OpenScreen() {
       <div className="flex border border-black bg-gray-950 pl-2 pr-3 rounded-md mt-4">
         <div className="flex">
           <Image alt="love" src="/love.png" width={55} height={55} />
-          <p className="text-xl mt-3.5">:3</p>
+          <p className="text-xl mt-3.5 text-white">:3</p>
         </div>
         <div className="flex">
           <Image alt="love" src="/time.png" width={55} height={55} />
-          <p className="text-xl mt-3.5">:3</p>
+          <p className="text-xl mt-3.5 text-white">:3</p>
         </div>
       </div>
       <div
