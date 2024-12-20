@@ -30,7 +30,7 @@ export default function OpenScreen() {
 
   return (
     <div className="min-h-screen bg-[url('/darkbg.svg')] bg-cover bg-center  flex flex-col items-center">
-      <div className="flex gap-2 pt-6">
+      <div className="flex gap-2">
         <div className="relative aspect-square ml-2">
           <Image src={"/hand.svg"} alt="Saved" width={100} height={100} className="w-full h-full object-cover"/>
           <div className="absolute border bg-button-angular bottom-0 left-0 right-0 p-4">
